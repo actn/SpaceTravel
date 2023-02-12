@@ -129,6 +129,11 @@ select{
 
 }
 
+.flow > *:where(:not(:first-child)){
+margin-top: var(--flow-space, 1rem);
+outline: 1px solid red;
+}
+
 .container{
     padding-inline: 2em;
     margin-inline: auto;
@@ -213,6 +218,7 @@ select{
     line-height: 1.1;
 }
 
+/* basliklar */
 .numbered-title{
   font-family: var(--ff-sans-cond);
   font-size: var(--fs-500);
@@ -225,3 +231,6 @@ select{
  font-weight: 700;
  color: hsl( var(--clr-white) / .25);
 }
+
+/* spacing */
+
