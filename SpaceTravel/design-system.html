@@ -1,25 +1,93 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <link rel="stylesheet" href="index.css">
-        <title>Design System</title>
-    </head>
-    <body class="bg-dark">
-        <div class="container">
-            <h1>Desing System</h1>
-            <div class="bg-accent text-dark" style="padding: 1rem;">
-                light blue bg with dark text
+
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700&family=Barlow:wght@400;700&family=Bellefair&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+    <title>Design System</title>
+</head>
+
+<body class="bg-dark text-white">
+    <div class="container">
+        <h1 class="uppercase ">Desing System</h1>
+
+        <section id="colors">
+            <h2 class="uppercase ff-sans-cond fs-500 letter-spacing-1"><span>01</span> colors</h2>
+            <div class="flex">
+                <div style="flex-grow: 1;">
+                    <div class="bg-dark text-white ff-serif fs-500" style="padding: 3rem 1rem 1rem; border: 1px solid white;">
+                        #0B0D17
+                    </div>
+                    <p><span>RGB</span> 11, 13, 23</p>
+                    <p><span>HSL</span> 230°, 35%, 7%</p>
+                </div>
+                <div style="flex-grow: 1;">
+                    <div class="bg-accent text-dark ff-serif fs-500" style="padding: 3rem 1rem 1rem; border: 1px solid white;">
+                        #D0D6F9
+                    </div>
+                    <p><span>RGB</span> 208, 214, 249</p>
+                    <p><span>HSL</span> 231°, 77%, 90%</p>
+                </div>
+                <div style="flex-grow: 1;">
+                    <div class="bg-white text-dark ff-serif fs-500" style="padding: 3rem 1rem 1rem; border: 1px solid white;">
+                        #FFFFFF
+                    </div>
+                    <p><span>RGB</span> 255, 255, 255</p>
+                    <p><span>HSL</span> 231°, 77%, 90%</p>
+                </div>
             </div>
-            <div class="bg-white text-dark" style="padding: 1rem;">
-                white bg, with dark text
+
+        </section>
+        <section id="typography" style="margin: 4rem 0;">
+            <h2><span>02</span> Typography</h2>
+            <div class="flex">
+                <div style="flex-basis: 100%;">
+                    <div>
+                        <p class="text-accent">Heading 1 - Bellefair Regular - 150px</p>
+                        <p class="uppercase ff-serif fs-900">Earth</p>
+                    </div>
+                    <div>
+                        <p class="text-accent">Heading 2 - Bellefair Regular - 100px</p>
+                        <p class="uppercase ff-serif fs-800">Venus</p>
+                    </div>
+                    <div>
+                        <p class="text-accent">Heading 3 - Bellefair Regular - 56px</p>
+                        <p class="uppercase ff-serif fs-700">Jupiter & Saturn</p>
+                    </div>
+                    <div>
+                        <p class="text-accent">Heading 4 - Bellefair Regular - 32px</p>
+                        <p class="uppercase ff-serif fs-600">Uranus, Neptune, & Pluto</p>
+                    </div>
+                    <div>
+                        <p class="text-accent">Heading 5 - Barlow Condensed Regular - 28px - 4.75 Character Space</p>
+                        <p class="uppercase ff-sans-cond fs-500 letter-spacing-1 text-accent">So, You want to travel to space</p>
+                    </div>
+                </div>
+                <div style="flex-basis: 100%;">
+                    <div>
+                        <p class="text-accent">Subheading 1 - Bellefair Regular - 28px</p>
+                        <p class="uppercase ff-serif fs-500">384.000 km</p>
+                    </div>
+                    <div>
+                        <p class="text-accent">Subheading 2 - Barlow Condensed Regular - 14px - 2.35 Character Space</p>
+                        <p class="uppercase ff-sans-cond fs-200 letter-spacing-3">Avg. Distance</p>
+                    </div>
+                    <div>
+                        <p class="text-accent">Nav Text - Barlow Condensed Regular - 16px - 2.7 Character Space</p>
+                        <p class="uppercase ff-sans-cond fs-300 letter-spacing-2">Europa</p>
+                    </div>
+                    <div>
+                        <p class="text-accent">Body Text</p>
+                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus hendrerit. Pellentesque aliquet nibh nec urna. In nisi neque, aliquet vel, dapibus id, mattis vel, nisi. Sed pretium, ligula sollicitudin laoreet viverra, tortor libero sodales leo, eget blandit nunc tortor eu nibh. Nullam mollis. Ut justo. Suspendisse potenti.Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus hendrerit. Pellentesque aliquet nibh nec urna. In nisi neque, aliquet vel, dapibus id, mattis vel, nisi. Sed pretium, ligula sollicitudin laoreet viverra, tortor libero sodales leo, eget blandit nunc tortor eu nibh. Nullam mollis. Ut justo. Suspendisse potenti.Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus hendrerit. Pellentesque aliquet nibh nec urna. In nisi neque, aliquet vel, dapibus id, mattis vel, nisi.</p>
+                    </div>
+                </div>
             </div>
-            <div class="text-white example-component" style="padding: 1rem; ">
-                light blue bg with a 20% alpha and white text
-            </div>
-               
-            <section id="colors">
-                
-            </section>
-        </div>
-    </body>
+        </section>
+    </div>
+</body>
+
 </html>
