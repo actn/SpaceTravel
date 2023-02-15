@@ -384,7 +384,7 @@ select {
 @media (max-width:35rem)
 {
   .primary-navigation {
-    --underline-gap: 2rem;
+    --underline-gap: .5rem;
     position: fixed;
     background: black;
     z-index: 1000;
@@ -393,6 +393,11 @@ select {
     padding: min(6rem, 15vh) 2rem;
     margin: 0;
     flex-direction: column;
+  }
+
+  .primary-navigation.underline-indicators > .active
+  {
+    border:0;
   }
 }
 
