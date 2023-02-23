@@ -546,7 +546,7 @@ select {
 .number-indicators>* {
   cursor: pointer;
   place-items: center;
-  width: var(--numberindicato-width, 5rem);
+  width: var(--numberindicator-width, 5rem);
   aspect-ratio: 1;
   margin: 0;
   padding: 0;
@@ -587,6 +587,10 @@ body {
   background-image: url(./assets/home/background-crew-mobile.jpg);
 
 }
+.technology {
+  background-image: url(./assets/technology/background-technology-mobile.jpg);
+
+}
 
 @media(min-width: 768px) {
   .home {
@@ -602,6 +606,10 @@ body {
     background-image: url(./assets/crew/background-crew-tablet.jpg);
   
   }
+  .technology {
+    background-image: url(./assets/technology/background-technology-tablet.jpg);
+  
+  }
 }
 
 @media(min-width: 1024px) {
@@ -615,6 +623,10 @@ body {
   }
   .crew {
     background-image: url(./assets/crew/background-crew-desktop.jpg);
+  
+  }
+  .technology {
+    background-image: url(./assets/technology/background-technology-desktop.jpg);
   
   }
 }
@@ -653,6 +665,7 @@ body {
 .grid-container--destination>picture {
   grid-area: image;
   max-width: 60%;
+  align-self: start;
 }
 
 .grid-container--destination>.tab-list {
@@ -706,6 +719,50 @@ body {
   color: hsl( var(--clr-white) / .5);
 }
 
+/* technology layout */
+
+.grid-container--technology {
+  --flow-space: 2rem;
+  padding: 0;
+  grid-template-areas:
+    'title'
+    'image'
+    'tabs'
+    'content';
+  grid-template-rows: 5% 45% 10% 40%;
+}
+.grid-container--technology> div.image {
+  grid-area: image;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 100%;
+  height: max(11rem,40vw);
+}
+#launchvehicle-image{
+  background-image: url(./assets/technology/image-launch-vehicle-landscape.jpg);
+}
+#spacecapsule-image{
+  background-image: url(./assets/technology/image-space-capsule-landscape.jpg);
+}
+#spaceport-image{
+  background-image: url(./assets/technology/image-spaceport-landscape.jpg);
+}
+.grid-container--technology>.number-indicators {
+  --numberindicator-width:5rem;
+  grid-area: tabs;
+  grid-template-columns: auto;
+}
+
+
+.grid-container--technology>.technology-info {
+  --flow-space:3.5rem;
+  grid-area: content;
+  align-self: start;
+}
+
+.technology-info h4 {
+  color: hsl( var(--clr-light) / 1);
+}
 @media screen and (min-width:768px) {
   .numbered-title {
     justify-self: start;
@@ -726,6 +783,14 @@ body {
       'image';
   }
 
+  .grid-container--technology {
+    grid-template-areas:
+      'title'
+      'image'
+      'tabs'
+      'content';
+  }
+
 }
 
 @media (min-width: 1024px) {
@@ -738,12 +803,10 @@ body {
 
   .grid-container--home>*:first-child {
     grid-column: 2;
-    outline: 1px solid red;
   }
 
   .grid-container--home>*:last-child {
     grid-column: 3;
-    outline: 1px solid yellow;
   }
 
   .grid-container--home {
@@ -754,15 +817,14 @@ body {
   .grid-container--destination {
     --container-gap: minmax(1rem, 1fr);
     justify-items: start;
-    align-content: center;
+    align-content: start;
     grid-template-areas:
       '. title title .'
       '. image tabs .'
       '. image content .';
   }
 
-  .grid-container--destination>picture,
-  .grid-container--crew>picture {
+  .grid-container--destination>picture {
     max-width: 90%;
   }
 
@@ -779,5 +841,42 @@ body {
       '. title image .'
       '. content image .'
       '. tabs image .';
+  }
+  .grid-container--crew>picture {
+    grid-column: span 2;
+    max-width: 90%;
+    align-self: end;
+
+  }
+
+  .grid-container--technology {
+    --container-gap: minmax(1rem, 1fr);
+
+    grid-template-areas:
+      '. title title .'
+      '. tabs content image';
+    grid-template-columns: 10% 10% 40% 40%;
+    grid-template-rows: 10% 90%;
+  }
+  .number-indicators{
+    flex-direction: column;
+  }
+  .grid-container--technology>.technology-info {
+    align-self: auto;
+  }
+  .grid-container--technology> div.image {
+    background-size:contain;
+    justify-self: end;
+    height: 60vh;
+    background-position: right;
+  }
+  #launchvehicle-image{
+    background-image: url(./assets/technology/image-launch-vehicle-portrait.jpg);
+  }
+  #spacecapsule-image{
+    background-image: url(./assets/technology/image-space-capsule-portrait.jpg);
+  }
+  #spaceport-image{
+    background-image: url(./assets/technology/image-spaceport-portrait.jpg);
   }
 }
